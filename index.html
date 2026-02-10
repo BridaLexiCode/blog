@@ -2,89 +2,122 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bridalexicode Blog</title>
-  <meta name="description" content="Blog sobre lenguaje, software y datos: conectar, escalar y adaptar." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Bridalexicode Blog — Lenguaje, software y cultura</title>
+  <meta name="description" content="Un blog editorial sobre comunicación multilingüe, sistemas digitales y cultura. Ideas claras para contextos complejos." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://TUUSUARIO.github.io/TUREPO/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bridalexicode Blog" />
+  <meta property="og:description" content="Lenguaje, software y cultura — ideas claras para contextos complejos." />
+  <meta property="og:url" content="https://TUUSUARIO.github.io/TUREPO/" />
+  <!-- Opcional: cuando tengas una imagen pública -->
+  <!-- <meta property="og:image" content="https://TUUSUARIO.github.io/TUREPO/assets/img/og-cover.png" /> -->
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bridalexicode Blog" />
+  <meta name="twitter:description" content="Lenguaje, software y cultura — ideas claras para contextos complejos." />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Bridalexicode Blog",
+    "url":"https://TUUSUARIO.github.io/TUREPO/",
+    "description":"Un blog editorial sobre comunicación multilingüe, sistemas digitales y cultura.",
+    "inLanguage":"es"
+  }
+  </script>
 </head>
 
 <body>
   <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Ir al inicio">
-        <span class="logo" aria-hidden="true"></span>
-        <div class="brand-text">
-          <h1>Bridalexicode</h1>
-          <p>Blog · Language · Software · Data</p>
-        </div>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Ir al home">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Bridalexicode</strong>
+          <span>Blog</span>
+        </span>
       </a>
 
-      <nav class="nav">
-        <a href="index.html" class="active">Inicio</a>
-        <a href="post.html">Último post</a>
-        <a href="#newsletter">Newsletter</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Servicios</a>
+        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="container">
     <section class="hero">
-      <span class="pill">✨ Intelligent language and software solutions that connect, scale, and adapt.</span>
-      <h2>Un blog para pensar, escribir y construir</h2>
-      <p class="muted">
-        Ideas prácticas sobre comunicación multilingüe, desarrollo de software y análisis con datos.
-        Publicaciones cortas, aplicables y con enfoque humano.
+      <p class="kicker">Escritura editorial · pensamiento de sistemas · cultura</p>
+      <h1>Lenguaje, software y significado en entornos complejos</h1>
+      <p class="lede">
+        Un espacio para entender cómo se construye claridad: desde la narrativa, los datos y la ingeniería.
       </p>
-
-      <div class="cta">
-        <a class="btn primary" href="post.html">Leer el último post</a>
-        <a class="btn" href="#posts">Ver publicaciones</a>
-      </div>
     </section>
 
-    <section id="posts" class="section">
-      <div class="section-head">
-        <h3>Publicaciones recientes</h3>
-        <p class="muted">Empieza con este formato y luego duplicas posts.</p>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <div class="card-top">
+    <section class="post-list" aria-label="Lista de artículos">
+      <article class="post-item">
+        <a href="post.html" class="post-link">
+          <h2>Por qué los sistemas de lenguaje fallan cuando escalan</h2>
+          <p>Cuando el volumen crece más rápido que el contexto, aparecen fallas silenciosas.</p>
+          <div class="meta">
+            <time datetime="2026-02-09">Feb 2026</time>
+            <span>·</span>
+            <span>6 min</span>
             <span class="tag">Lenguaje</span>
-            <time class="meta" datetime="2026-02-02">Feb 2, 2026</time>
           </div>
-          <h4>Cómo unificar el tono de tu web en 60 minutos</h4>
-          <p class="muted">
-            Un checklist rápido para detectar inconsistencias, definir una guía de estilo y alinear tu mensaje.
-          </p>
-          <a class="link" href="post.html">Leer →</a>
-        </article>
+        </a>
+      </article>
 
-        <article class="card">
-          <div class="card-top">
-            <span class="tag">Software</span>
-            <time class="meta" datetime="2026-02-01">Feb 1, 2026</time>
+      <article class="post-item">
+        <a href="post.html" class="post-link">
+          <h2>Comunicación “neutral”: el mito más caro</h2>
+          <p>La neutralidad es una ilusión cuando hay poder, cultura y decisiones en juego.</p>
+          <div class="meta">
+            <time datetime="2026-01-29">Ene 2026</time>
+            <span>·</span>
+            <span>5 min</span>
+            <span class="tag">Cultura</span>
           </div>
-          <h4>Plantillas de email B2B: claras, humanas y escalables</h4>
-          <p class="muted">
-            Estructura simple (subject + valor + prueba + CTA) para escribir mejor y más rápido.
-          </p>
-          <a class="link" href="post.html">Leer →</a>
-        </article>
+        </a>
+      </article>
 
-        <article class="card">
-          <div class="card-top">
+      <article class="post-item">
+        <a href="post.html" class="post-link">
+          <h2>KPIs mínimos para contenido multilingüe</h2>
+          <p>Qué medir (y qué no) para mejorar claridad, conversión y consistencia.</p>
+          <div class="meta">
+            <time datetime="2026-01-10">Ene 2026</time>
+            <span>·</span>
+            <span>4 min</span>
             <span class="tag">Data</span>
-            <time class="meta" datetime="2026-01-30">Jan 30, 2026</time>
           </div>
-          <h4>KPIs mínimos para medir comunicación multilingüe</h4>
-          <p class="muted">
-            Métricas básicas para evaluar consistencia, performance y conversiones sin complicarte.
-          </p>
-          <a class="link" href="post.html">Leer →</a>
-        </article>
-      </div>
+        </a>
+      </article>
     </section>
+  </main>
 
-    <sectio
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Diana Traslaviña</p>
+      <div class="social" aria-label="Redes sociales">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
