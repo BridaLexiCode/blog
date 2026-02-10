@@ -1,48 +1,56 @@
 :root{
-  /* Tu paleta */
-  --terracotta:#a44b3f;
-  --peach:#f09c78;
-  --sage:#cbdfbc;
-  --cream:#f7f4d3;
-  --olive:#d5e09c;
+  /* Paleta Brida (adaptada a dark) */
+  --terracotta:#d07a6a;
+  --peach:#f2a487;
+  --sage:#9fb7a1;
+  --cream:#f2efe4;
+  --olive:#b9c88a;
 
-  /* Base editorial */
-  --bg:#ffffff;
-  --text:#1f1f1f;
-  --muted:#6b6b6b;
-  --line:rgba(0,0,0,.08);
+  /* Dark editorial base */
+  --bg:#0f1115;
+  --bg-soft:#141720;
+  --text:#e8e9ec;
+  --muted:#a3a6ad;
+  --line:rgba(255,255,255,.08);
 
   --max:1100px;
   --narrow:760px;
 }
 
+/* Reset */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+
 body{
   background:var(--bg);
   color:var(--text);
   line-height:1.75;
 
-  /* editorial like btw: serif, calm */
+  /* Editorial serif like btw */
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-rendering: optimizeLegibility;
 }
 
 a{color:inherit}
+
+/* Layout */
 .container{
   max-width:var(--max);
   margin:0 auto;
   padding:56px 24px;
 }
 .container.narrow{max-width:var(--narrow)}
+
+/* Header */
 .site-header{
   position:sticky;
   top:0;
   z-index:10;
-  background:rgba(255,255,255,.92);
+  background:rgba(15,17,21,.85);
   backdrop-filter: blur(10px);
   border-bottom:1px solid var(--line);
 }
+
 .header-inner{
   display:flex;
   align-items:center;
@@ -53,41 +61,51 @@ a{color:inherit}
   margin:0 auto;
 }
 
+/* Brand */
 .brand{
   display:flex;
   gap:10px;
   align-items:center;
   text-decoration:none;
 }
+
 .mark{
   width:28px;
   height:28px;
   border-radius:10px;
   background: linear-gradient(135deg, var(--terracotta), var(--peach));
 }
+
 .brand-text{
   display:flex;
   flex-direction:column;
   line-height:1.1;
 }
 .brand-text strong{font-size:15px}
-.brand-text span{font-size:12px;color:var(--muted)}
+.brand-text span{
+  font-size:12px;
+  color:var(--muted);
+}
 
+/* Nav */
 .nav a{
   text-decoration:none;
   color:var(--muted);
   margin-left:18px;
   font-size:14px;
 
-  /* sans para navegación (contraste editorial) */
+  /* Sans for UI */
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
-.nav a:hover{color:var(--terracotta)}
+
+.nav a:hover{color:var(--cream)}
 .nav a.active{color:var(--text)}
 
+/* Hero */
 .hero{
   padding:16px 0 12px;
 }
+
 .kicker{
   color:var(--muted);
   margin:0 0 10px;
@@ -95,12 +113,14 @@ a{color:inherit}
   letter-spacing:.2px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
 h1{
   font-size:44px;
   letter-spacing:-.02em;
   margin:0 0 14px;
   line-height:1.15;
 }
+
 .lede{
   font-size:18px;
   color:var(--muted);
@@ -109,30 +129,37 @@ h1{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+/* Blog list */
 .post-list{
   margin-top:34px;
   border-top:1px solid var(--line);
 }
+
 .post-item{
   border-bottom:1px solid var(--line);
 }
+
 .post-link{
   display:block;
   padding:22px 0;
   text-decoration:none;
 }
+
 .post-link h2{
   font-size:26px;
   margin:0 0 8px;
   letter-spacing:-.01em;
   line-height:1.25;
 }
+
 .post-link p{
   margin:0 0 10px;
   color:var(--muted);
   max-width:80ch;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
+/* Meta */
 .meta{
   display:flex;
   gap:8px;
@@ -141,84 +168,114 @@ h1{
   font-size:13px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
 .tag{
   margin-left:8px;
   padding:3px 10px;
   border-radius:999px;
-  background:rgba(165,75,63,.08);
+  background:rgba(208,122,106,.12);
   color:var(--terracotta);
-  border:1px solid rgba(165,75,63,.16);
+  border:1px solid rgba(208,122,106,.25);
 }
 
+/* Post */
 .post{
   padding-top:8px;
 }
+
 .post-header{
   padding:10px 0 20px;
   border-bottom:1px solid var(--line);
 }
+
 .post-header h1{font-size:42px}
+
 .content{
   padding-top:18px;
 }
+
 .content h2{
-  margin:22px 0 10px;
+  margin:26px 0 10px;
   font-size:22px;
   letter-spacing:-.01em;
 }
-.content p, .content li{
+
+.content p,
+.content li{
   font-size:18px;
 }
+
 .content ul{
   padding-left:18px;
-  color:var(--text);
 }
+
 blockquote{
-  margin:18px 0;
-  padding:12px 14px;
+  margin:22px 0;
+  padding:14px 16px;
   border-left:3px solid var(--terracotta);
-  background: rgba(247,244,211,.5);
-  color: #333;
+  background:rgba(208,122,106,.10);
+  color:var(--cream);
   font-style: italic;
 }
 
+/* Pages (services / about) */
 .page h1{font-size:40px}
-.stack{margin-top:18px; display:grid; gap:16px}
-.service, .card-lite{
+
+.stack{
+  margin-top:18px;
+  display:grid;
+  gap:18px;
+}
+
+.service,
+.card-lite{
   padding:14px 0;
   border-bottom:1px solid var(--line);
 }
-.service h2, .card-lite h2{
+
+.service h2,
+.card-lite h2{
   margin:0 0 8px;
   font-size:20px;
 }
-.service p, .card-lite p{
+
+.service p,
+.card-lite p{
   margin:0 0 10px;
   color:var(--muted);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
 .service ul{
   margin:0;
   padding-left:18px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
+/* Links */
 .post-actions{
-  margin-top:18px;
+  margin-top:22px;
   display:flex;
-  gap:16px;
+  gap:18px;
   flex-wrap:wrap;
 }
+
 .text-link{
-  color:var(--terracotta);
+  color:var(--peach);
   text-decoration:none;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
-.text-link:hover{text-decoration:underline}
 
+.text-link:hover{
+  text-decoration:underline;
+}
+
+/* Footer */
 .site-footer{
   border-top:1px solid var(--line);
+  background:var(--bg-soft);
 }
+
 .footer-inner{
   display:flex;
   justify-content:space-between;
@@ -230,13 +287,18 @@ blockquote{
   font-size:14px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
 .social a{
   margin-left:14px;
   text-decoration:none;
   color:var(--muted);
 }
-.social a:hover{color:var(--terracotta)}
 
+.social a:hover{
+  color:var(--cream);
+}
+
+/* Responsive */
 @media (max-width:700px){
   h1{font-size:36px}
   .post-header h1{font-size:34px}
